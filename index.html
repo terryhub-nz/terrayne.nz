@@ -1,73 +1,56 @@
-<style>
-  :root {
-    /* Updated to closely match the logo background gradient midpoint */
-    --bg: linear-gradient(135deg, #d5cbbb, #eadfd1);
-    --text: #27322d; /* pulled from logo text */
-    --muted: #4f5a55;
-  }
-
-  * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  body {
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Literata', serif;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 24px;
-  }
-
-  .wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 28px;
-    transform: translateY(-6vh);
-  }
-
-  .logo {
-    max-width: 340px;
-    width: 70vw;
-    height: auto;
-    display: block;
-  }
-
-  h1 {
-    font-size: 2.5rem;
-    font-weight: 400;
-    font-family: 'Literata', serif; /* closer match to logo */
-    letter-spacing: 0.12em;
-    color: var(--text);
-    text-transform: uppercase;
-  }
-
-  .email {
-    margin-top: 10px;
-    font-size: 1rem;
-    color: var(--muted);
-  }
-
-  .email a {
-    color: inherit;
-    text-decoration: none;
-    border-bottom: 1px solid rgba(79, 90, 85, 0.4);
-    padding-bottom: 2px;
-  }
-
-  .email a:hover {
-    border-bottom-color: rgba(79, 90, 85, 0.8);
-  }
-
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 1.9rem;
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terrayne | Holiday Destination</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #9ba5a4; /* soft neutral background */
+      font-family: Arial, sans-serif;
+      color: #f8f5ed; /* light cream text for contrast */
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-  }
-</style>
+    .wrap {
+      max-width: 600px;
+      padding: 20px;
+    }
+    .logo {
+      width: 80%;
+      max-width: 400px;
+      height: auto;
+      margin-bottom: 30px;
+    }
+    h1 {
+      font-size: 3rem;
+      margin: 0 0 20px 0;
+      font-weight: bold;
+      letter-spacing: 2px;
+      color: #f8f5ed; /* matches the logo’s cream text */
+    }
+    .email {
+      font-size: 1.2rem;
+      margin-top: 30px;
+    }
+    .email a {
+      color: #f8f5ed;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <img src="terrayne.png" alt="Terrayne Logo" class="logo">
+    <h1>Coming Soon</h1>
+    <p class="email">
+      Contact us: <a href="mailto:hello@terrayne.nz">hello@terrayne.nz</a>
+    </p>
+  </div>
+</body>
+</html>
