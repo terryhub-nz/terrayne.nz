@@ -1,56 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Terrayne | Holiday Destination</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terrayne</title>
+
+  <!-- Google Font matching logo -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    :root {
+      --bg: #E5DCCB;        /* exact background colour */
+      --text: #3A433A;      /* exact logo text colour */
+    }
+
+    * {
       margin: 0;
       padding: 0;
-      background-color: #9ba5a4; /* soft neutral background */
-      font-family: Arial, sans-serif;
-      color: #f8f5ed; /* light cream text for contrast */
-      height: 100vh;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Montserrat", sans-serif;
+      min-height: 100vh;
       display: flex;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
     }
-    .wrap {
-      max-width: 600px;
-      padding: 20px;
+
+    .shell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transform: translateY(-6vh); /* positions slightly above centre */
     }
+
     .logo {
-      width: 80%;
-      max-width: 400px;
+      width: min(380px, 80vw);
       height: auto;
-      margin-bottom: 30px;
+      margin-bottom: 3rem;
     }
+
     h1 {
-      font-size: 3rem;
-      margin: 0 0 20px 0;
-      font-weight: bold;
-      letter-spacing: 2px;
-      color: #f8f5ed; /* matches the logo’s cream text */
+      font-size: clamp(2.8rem, 6vw, 3.6rem);
+      font-weight: 500;
+      letter-spacing: 0.22em;   /* matches logo spacing */
+      text-transform: uppercase;
+      margin-bottom: 2rem;
     }
-    .email {
-      font-size: 1.2rem;
-      margin-top: 30px;
+
+    .contact {
+      font-size: 1.05rem;
+      font-weight: 400;
+      opacity: 0.85;
     }
-    .email a {
-      color: #f8f5ed;
+
+    .contact a {
+      color: var(--text);
       text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .contact a:hover {
+      opacity: 1;
     }
   </style>
 </head>
 <body>
-  <div class="wrap">
-    <img src="terrayne.png" alt="Terrayne Logo" class="logo">
-    <h1>Coming Soon</h1>
-    <p class="email">
-      Contact us: <a href="mailto:hello@terrayne.nz">hello@terrayne.nz</a>
+
+  <main class="shell">
+
+    <img src="logo.png" alt="Terrayne logo" class="logo">
+
+    <h1>Coming&nbsp;Soon</h1>
+
+    <p class="contact">
+      Contact us:
+      <a href="mailto:hello@terrayne.nz">hello@terrayne.nz</a>
     </p>
-  </div>
+
+  </main>
+
 </body>
 </html>
