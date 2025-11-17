@@ -1,11 +1,167 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Terrayne</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --bg: #f3ebdd;
+      --text: #23302a;
+      --muted: #5c6a63;
+      --card: #ffffff;
+      --border: #d9cfbe;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
+
+    .shell {
+      max-width: 720px;
+      width: 100%;
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      padding: 32px 28px 28px;
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .logo img {
+      width: 72px;
+      height: 72px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .logo-text {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.05rem;
+    }
+
+    h1 {
+      font-size: 1.6rem;
+      margin-bottom: 8px;
+    }
+
+    .tagline {
+      color: var(--muted);
+      font-size: 0.98rem;
+      margin-bottom: 28px;
+      line-height: 1.5;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #f5efe2;
+      color: var(--muted);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 16px;
+    }
+
+    .contact-box {
+      padding: 14px 16px;
+      border-radius: 12px;
+      background: #f7f1e5;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.95rem;
+    }
+
+    .contact-box strong {
+      font-weight: 600;
+    }
+
+    a {
+      color: var(--text);
+    }
+
+    .cta-link {
+      font-weight: 600;
+      text-decoration: none;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid #c6bca9;
+      background: #fff;
+    }
+
+    .cta-link:hover {
+      background: #f1e7d6;
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        padding: 24px 18px 20px;
+      }
+
+      .logo img {
+        width: 60px;
+        height: 60px;
+      }
+
+      h1 {
+        font-size: 1.35rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Terrayne</h1>
-  <p>Website successfully connected.</p>
+  <main class="shell">
+    <div class="logo">
+      <img src="logo.png" alt="Terrayne logo" />
+      <div class="logo-text">Terrayne</div>
+    </div>
+
+    <div class="pill">Holiday accommodation &nbsp;•&nbsp; Central Otago</div>
+
+    <h1>Terrayne is coming soon.</h1>
+    <p class="tagline">
+      A holiday accommodation project for us at our new home in Central Otago.
+      We’re working on something special and will be opening bookings in due
+      course.
+    </p>
+
+    <div class="contact-box">
+      <span>
+        <strong>Enquiries</strong><br />
+        Email us any time.
+      </span>
+      <a class="cta-link" href="mailto:hello@terrayne.nz">
+        hello@terrayne.nz
+      </a>
+    </div>
+  </main>
 </body>
 </html>
