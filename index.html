@@ -1,89 +1,73 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <title>Terrayne</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    :root {
-      /* Soft background – adjust if you want it closer to the logo later */
-      --bg: #dccfbf;
-      --text: #23302a;
-      --muted: #4f5a55;
-    }
+<style>
+  :root {
+    /* Updated to closely match the logo background gradient midpoint */
+    --bg: linear-gradient(135deg, #d5cbbb, #eadfd1);
+    --text: #27322d; /* pulled from logo text */
+    --muted: #4f5a55;
+  }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-        sans-serif;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-    }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Literata', serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 24px;
+  }
 
-    .wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 28px;
-      transform: translateY(-6vh); /* slightly above centre */
-    }
+  .wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+    transform: translateY(-6vh);
+  }
 
-    .logo {
-      max-width: 320px;
-      width: 70vw;
-      height: auto;
-      display: block;
-    }
+  .logo {
+    max-width: 340px;
+    width: 70vw;
+    height: auto;
+    display: block;
+  }
 
+  h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    font-family: 'Literata', serif; /* closer match to logo */
+    letter-spacing: 0.12em;
+    color: var(--text);
+    text-transform: uppercase;
+  }
+
+  .email {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--muted);
+  }
+
+  .email a {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: 1px solid rgba(79, 90, 85, 0.4);
+    padding-bottom: 2px;
+  }
+
+  .email a:hover {
+    border-bottom-color: rgba(79, 90, 85, 0.8);
+  }
+
+  @media (max-width: 600px) {
     h1 {
-      font-size: 2.4rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-weight: 500;
+      font-size: 1.9rem;
     }
-
-    .email {
-      margin-top: 10px;
-      font-size: 1.05rem;
-      color: var(--muted);
-    }
-
-    .email a {
-      color: inherit;
-      text-decoration: none;
-      border-bottom: 1px solid rgba(79, 90, 85, 0.4);
-      padding-bottom: 2px;
-    }
-
-    .email a:hover {
-      border-bottom-color: rgba(79, 90, 85, 0.8);
-    }
-
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-      }
-    }
-  </style>
-</head>
-<body>
-  <main class="wrap">
-    <img src="logo.png" alt="Terrayne" class="logo" />
-    <h1>Coming Soon</h1>
-    <p class="email">
-      <a href="mailto:hello@terrayne.nz">hello@terrayne.nz</a>
-    </p>
-  </main>
-</body>
-</html>
+  }
+</style>
